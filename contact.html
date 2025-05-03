@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>צור קשר</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Alef:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0f0f1a;
+      background-image:
+        radial-gradient(circle at 15% 50%, rgba(17, 24, 39, 0.7), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(76, 29, 149, 0.5), transparent 25%);
+      color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2 {
+      font-family: 'Alef', sans-serif;
+      margin-top: 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .glow {
+      text-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 30px #8b5cf6;
+    }
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    label {
+      font-family: 'Alef', sans-serif;
+      font-weight: 700;
+    }
+    input,
+    textarea {
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #f3f4f6;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+      border-color: #8b5cf6;
+    }
+    button {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      color: #fff;
+      padding: 1rem 2rem;
+      font-family: 'Alef', sans-serif;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      align-self: flex-end;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
+    }
+    p {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    a {
+      color: #8b5cf6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="glow">צור קשר</h1>
+  </header>
+  <main>
+    <form action="#" method="POST">
+      <label for="name">שם מלא</label>
+      <input type="text" id="name" name="name" placeholder="הכנס את שמך" required />
+
+      <label for="email">דוא"ל</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+      <label for="message">הודעה</label>
+      <textarea id="message" name="message" rows="5" placeholder="ההודעה שלך..." required></textarea>
+
+      <button type="submit">שלח</button>
+    </form>
+    <p>או לתקשורת מהירה בוואטסאפ: <a href="https://wa.me/YOUR_PHONE_NUMBER_HERE?text=שלום">לחצו כאן לוואטסאפ</a></p>
+  </main>
+  <footer>
+    © 2025 גיימרז דילז - כל הזכויות שמורות
+  </footer>
+</body>
+</html>
