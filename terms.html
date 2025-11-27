@@ -1,243 +1,126 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הלוט היומי - תנאי שימוש</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Color Variables */
-    :root {
-      --primary-color: #7c3aed; /* Purple */
-      --accent-color: #ec4899; /* Pink */
-      --cta-color: #8b5cf6; /* Violet */
-      --text-color: #2c3e50; /* Dark Slate */
-      --light-bg-gradient: linear-gradient(135deg, #fdf2f8 0%, #faf5ff 100%);
-      --hero-bg-gradient: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Rubik', sans-serif;
-      line-height: 1.75; 
-      color: var(--text-color);
-      background: var(--light-bg-gradient);
-      min-height: 100vh;
-      padding: 40px 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      max-width: 800px;
-      width: 90%;
-      margin: auto;
-      background: #ffffff;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.15);
-      border-radius: 15px;
-      overflow: hidden;
-      flex-grow: 1;
-    }
-
-    .terms-header {
-      background: var(--hero-bg-gradient);
-      color: white;
-      padding: 50px 40px;
-      text-align: center;
-    }
-
-    .terms-header h1 {
-      font-size: 38px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תקנון שימוש - הלוט היומי</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     
-    .terms-header p {
-        font-size: 16px;
-        opacity: 0.9;
-    }
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: #0f0f1a;
+            background-image: 
+                linear-gradient(rgba(15, 15, 26, 0.95), rgba(15, 15, 26, 0.98)),
+                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #d1d5db;
+        }
 
-    .terms-content {
-      padding: 40px 40px 60px;
-    }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-    .terms-content h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 5px;
-    }
-
-    .terms-content h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-top: 25px;
-      margin-bottom: 10px;
-      color: var(--accent-color);
-    }
-    
-    .terms-content p {
-        margin-bottom: 15px;
-    }
-
-    .terms-content ol, .terms-content ul {
-      margin-right: 20px;
-      margin-bottom: 20px;
-      padding-right: 15px;
-    }
-    
-    .terms-content ol li, .terms-content ul li {
-        margin-bottom: 10px;
-    }
-    
-    .terms-content ol { list-style: decimal; }
-    .terms-content ul { list-style: disc; }
-
-    .terms-content a {
-      color: var(--cta-color);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    
-    .terms-content a:hover {
-        color: var(--primary-color);
-    }
-    
-    .important-notice {
-        background: #fff5f5;
-        border-right: 5px solid #ef4444;
-        padding: 15px;
-        margin: 25px 0;
-        border-radius: 5px;
-        color: #ef4444;
-        font-weight: 600;
-    }
-
-    .policy-footer {
-        text-align: center;
-        padding: 20px 40px;
-        font-size: 14px;
-        color: #95a5a6;
-        background: #f4f4f4;
-        border-top: 1px solid #e0e0e0;
-    }
-    
-    .policy-footer a {
-      color: var(--cta-color);
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 10px;
-    }
-    
-    .policy-footer a:hover {
-        color: var(--primary-color);
-    }
-
-    @media (max-width: 768px) {
-        body { padding: 0; }
-        .container { border-radius: 0; box-shadow: none; width: 100%; }
-        .terms-header, .terms-content { padding: 30px 20px; }
-        .terms-header h1 { font-size: 30px; }
-        .terms-content h2 { font-size: 22px; }
-    }
-  </style>
+        h1, h2, h3 { color: #f3f4f6; }
+        
+        /* Custom scrollbar for legal text */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    
-    <header class="terms-header">
-      <h1>תנאי שימוש</h1>
-      <p>עדכון אחרון: 26 בנובמבר, 2025</p>
-    </header>
+    <div class="min-h-screen flex flex-col">
+        <header class="py-6 px-6 border-b border-gray-800 bg-black/50">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="font-black text-xl tracking-wider text-white">
+                    DAILY<span class="text-purple-500">LOOT</span>
+                    <span class="text-xs text-gray-500 font-normal block">תקנון ותנאי שימוש</span>
+                </div>
+                <a href="index.html" class="text-sm font-bold text-gray-300 hover:text-purple-400 transition-colors flex items-center gap-2">
+                    <span>חזרה לדף הבית</span>
+                    <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </header>
 
-    <section class="terms-content">
-      
-      <p>ברוכים הבאים ל<strong>הלוט היומי</strong> ("השירות"). תנאי השימוש ("התנאים") מסדירים את השימוש שלך בערוץ הטלגרם, קבוצת הוואטסאפ, והאתר שלנו. על ידי הצטרפות לשירות או שימוש בו, אתה מסכים להיות מחויב לתנאים אלה.</p>
+        <main class="flex-grow py-12 px-4 md:px-8">
+            <div class="container mx-auto max-w-4xl">
+                <div class="glass-panel p-8 md:p-12 rounded-2xl shadow-2xl">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-8 border-b border-gray-700 pb-4">תקנון שימוש באתר ובערוץ הטלגרם</h1>
+                    
+                    <div class="space-y-8 text-sm md:text-base leading-relaxed">
+                        
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">1. כללי</h2>
+                            <p>
+                                ברוכים הבאים ל-"הלוט היומי" (להלן: "האתר" או "הערוץ"). השימוש באתר, בערוץ הטלגרם ובתכנים המוצגים בהם כפוף לתנאי השימוש המפורטים להלן. עצם השימוש או ההצטרפות לערוץ מהווים הסכמה מוחלטת לתנאים אלו.
+                            </p>
+                        </section>
 
-      <h2>1. תיאור השירות</h2>
-      
-      <p><strong>הלוט היומי</strong> הוא שירות חינמי המספק ללקוחותיו מידע על מוצרים טרנדיים ודילים מ-AliExpress ואתרי קניות אחרים באמצעות ערוצי טלגרם וקבוצות וואטסאפ.</p>
-      <ul>
-          <li><strong>קישורי שותפים:</strong> השירות כולל קישורי שותפים (Affiliate Links) למוצרים ב-AliExpress. כאשר אתה לוחץ על קישור ורוכש מוצר, אנו עשויים לקבל עמלה מ-AliExpress ללא עלות נוספת עבורך.</li>
-          <li><strong>שירות חינמי:</strong> הצטרפות לערוץ והשימוש בשירות הינם חינמיים לחלוטין. אין חיוב או תשלום.</li>
-      </ul>
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">2. מהות השירות</h2>
+                            <p>
+                                "הלוט היומי" הינו גוף תוכן המספק חדשות טכנולוגיה, טיפים לגיימינג והמלצות על מוצרים ושירותים צד ג'.
+                                <br><br>
+                                <strong>חשוב להדגיש:</strong> מפעילי הערוץ אינם מוכרים מוצרים, אינם מחזיקים במלאי, ואינם מבצעים משלוחים. כל הרכישות מתבצעות באתרי סחר חיצוניים (כגון AliExpress, KSP, Amazon וכדומה) ובאחריותם הבלעדית.
+                            </p>
+                        </section>
 
-      <h2>2. הצהרות חשובות</h2>
-      
-      <div class="important-notice">
-        <strong>שים לב:</strong> אנחנו לא אחראים על עסקאות שנעשות דרך AliExpress או כל אתר צד שלישי אחר.
-      </div>
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">3. הגבלת אחריות</h2>
+                            <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                <li><strong>טיב המוצרים:</strong> הנהלת הערוץ לא תישא באחריות לטיב המוצרים, איכותם, התאמתם לתיאור, או כל פגם שיתגלה בהם. האחריות חלה על הספק/החנות בלבד.</li>
+                                <li><strong>משלוח ואספקה:</strong> אין לנו שליטה על זמני משלוח, תשלומי מכס, או אובדן חבילות.</li>
+                                <li><strong>מחירים:</strong> המחירים המפורסמים בערוץ נכונים לרגע הפרסום בלבד. ייתכנו שינויי מחיר ע"י החנויות ללא הודעה מוקדמת. במקרה של פער מחירים, המחיר הקובע הוא זה המופיע באתר החנות.</li>
+                            </ul>
+                        </section>
 
-      <ol>
-          <li><strong>אין אחריות למוצרים:</strong> אנו מספקים מידע ומציגים מוצרים בלבד. הרכישה עצמה מתבצעת ישירות מ-AliExpress או מהספק. איכות המוצר, זמני משלוח, והחזרות הינם באחריות הספק בלבד.</li>
-          <li><strong>אין התחייבות לתוצאות:</strong> אנו לא מתחייבים שתמצא את המוצר המושלם או שתחסוך סכום מסוים. המידע מסופק "כמות שהוא".</li>
-          <li><strong>מחירים משתנים:</strong> המחירים באתרי הקניות משתנים בתדירות גבוהה. המחיר הסופי נקבע על ידי האתר בו אתה רוכש.</li>
-          <li><strong>משלוחים:</strong> זמני משלוח ועלויות משלוח נקבעים על ידי הספק ולא על ידינו.</li>
-      </ol>
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">4. גילוי נאות (Affiliate Disclosure)</h2>
+                            <p>
+                                חלק מהקישורים המופיעים בערוץ ובאתר הינם קישורי שותפים (Affiliate Links). משמעות הדבר היא שמפעילי הערוץ עשויים לקבל עמלה סמלית בעת ביצוע רכישה דרך הקישורים, ללא כל עלות נוספת מצד הרוכש. הכנסות אלו משמשות לתחזוקת הקהילה ויצירת תוכן.
+                            </p>
+                        </section>
 
-      <h2>3. זכויות קניין רוחני</h2>
-      <p>כל התוכן בערוץ, בקבוצה ובאתר, כולל טקסטים, תמונות, לוגואים והמלצות, הינו קניין של הלוט היומי ומוגן על ידי חוקי זכויות יוצרים.</p>
-      <ul>
-          <li><strong>שימוש אישי בלבד:</strong> אתה רשאי להשתמש במידע לשימושך האישי בלבד.</li>
-          <li><strong>איסורים:</strong> אין להעתיק, לשכפל, להפיץ, למכור או לנצל בכל דרך אחרת את התוכן ללא אישורנו בכתב.</li>
-      </ul>
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">5. קניין רוחני</h2>
+                            <p>
+                                כל זכויות היוצרים והקניין הרוחני בעיצוב האתר, בשם "הלוט היומי", בלוגו, ובתכנים המקוריים (טקסטים, סקירות, טיפים) הינם רכושם הבלעדי של מפעילי הערוץ. אין להעתיק, לשכפל או להפיץ תכנים אלו ללא אישור בכתב.
+                            </p>
+                        </section>
 
-      <h2>4. התנהגות משתמשים</h2>
-      <p>כמשתמש בשירות, אתה מתחייב:</p>
-      <ul>
-          <li>לא להשתמש בשירות למטרות בלתי חוקיות.</li>
-          <li>לא לשלוח ספאם, וירוסים או תוכן מזיק אחר לקבוצה או לערוץ.</li>
-          <li>לא לנסות לגשת למערכות שלנו בצורה בלתי מורשית.</li>
-          <li>להתנהג בכבוד כלפי חברי הקבוצה והמנהלים.</li>
-          <li>לא לפרסם תוכן פוגעני, גזעני או מפלה.</li>
-      </ul>
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">6. קישורים חיצוניים</h2>
+                            <p>
+                                הערוץ מכיל קישורים לאתרים חיצוניים. איננו אחראים למדיניות הפרטיות, לתכנים או לאבטחת המידע באתרים אלו. הגלישה בהם היא על אחריות המשתמש בלבד.
+                            </p>
+                        </section>
 
-      <h2>5. הסרה מהשירות</h2>
-      <p>אנו שומרים לעצמנו את הזכות להסיר כל משתמש מהערוץ או מהקבוצה בכל עת ומכל סיבה, כולל אך לא רק:</p>
-      <ul>
-          <li>הפרת תנאי שימוש אלה.</li>
-          <li>שליחת ספאם או תוכן לא רלוונטי.</li>
-          <li>התנהגות פוגענית או הטרדה של חברי קבוצה אחרים.</li>
-      </ul>
+                        <section>
+                            <h2 class="text-xl font-bold text-purple-400 mb-3">7. שינויים בתקנון</h2>
+                            <p>
+                                הנהלת האתר שומרת לעצמה את הזכות לעדכן את תנאי השימוש מעת לעת ללא הודעה מוקדמת.
+                            </p>
+                        </section>
+                        
+                        <div class="pt-8 mt-8 border-t border-gray-700 text-xs text-gray-500">
+                            עודכן לאחרונה: נובמבר 2025
+                        </div>
 
-      <h2>6. הגבלת אחריות</h2>
-      <p>במידה המרבית המותרת על פי חוק, הלוט היומי והשותפים שלה לא יהיו אחראים לכל נזק ישיר, עקיף, מקרי, תוצאתי או עונשי הנובע מהשימוש שלך בשירות או חוסר היכולת להשתמש בו.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-      <h2>7. קישורים לאתרים חיצוניים</h2>
-      <p>השירות מכיל קישורים לאתרי צד שלישי כגון AliExpress. אנו לא אחראים על תוכן, מדיניות פרטיות או שיטות של אתרים אלה. השימוש באתרים חיצוניים הוא באחריותך הבלעדית.</p>
-
-      <h2>8. דין חל</h2>
-      <p>תנאים אלה יהיו כפופים ויפורשו בהתאם לחוקי <strong>מדינת ישראל</strong>, ללא התחשבות בעקרונות ברירת הדין שלה.</p>
-      
-      <h2>9. שינויים בתנאים</h2>
-      <p>אנו שומרים לעצמנו את הזכות לשנות תנאים אלה בכל עת. נודיע לך על שינויים על ידי פרסום התנאים החדשים בעמוד זה ועדכון תאריך "עדכון אחרון". המשך השימוש שלך בשירות לאחר שינויים כאלה מהווה את הסכמתך לתנאים החדשים.</p>
-
-      <h2>10. יצירת קשר</h2>
-      <p>שאלות לגבי התנאים יש לשלוח אלינו בדוא"ל:</p>
-      <p style="font-weight: 700;">support@haloot-hayomi.com</p>
-
-    </section>
-
-    <footer class="policy-footer">
-        <p>&copy; 2025 הלוט היומי. כל הזכויות שמורות.</p>
-        <p>
-            <a href="./privacy-policy.html">מדיניות פרטיות</a> |
-            <a href="./contact.html">צור קשר</a> |
-            <a href="./index.html">דף הבית</a>
-        </p>
-    </footer>
-
-  </div>
+        <footer class="py-6 border-t border-gray-800 bg-black/40 text-center">
+            <p class="text-gray-600 text-sm">Daily Loot © 2025</p>
+        </footer>
+    </div>
 </body>
 </html>
